@@ -17,6 +17,8 @@ func main() {
 	r := httprouter.New()
 	r.GET("/user", myroutes.GetUsers)
 	r.GET("/user/:id", myroutes.GetUser)
+	r.PUT("/user/:id", myroutes.UpdateUser)
+	r.DELETE("/user/:id", myroutes.DeleteUser)
 	r.POST("/user", myroutes.CreateUser)
 
 	fmt.Println("Server listening on port 3000")
